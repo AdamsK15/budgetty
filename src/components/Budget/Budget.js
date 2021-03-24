@@ -20,8 +20,10 @@ class Budget extends Component {
   }
 
   render() {
+
     const { loading, purchases, budgetLimit } = this.props.budget;
     const { firstName, lastName } = this.props.user;
+
     return (
       <Background>
         {loading ? <Loading /> : null}
@@ -45,8 +47,10 @@ class Budget extends Component {
 
 function mapStateToProps(state) {
   return {
+
     budget: state.budget,
     user: state.user
+
   }
 }
 
